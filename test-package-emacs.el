@@ -34,7 +34,7 @@
 (require 'xref)
 (require 'dired)
 
-(require 'chronos)
+;; (require 'chronos)
 
 (defgroup test-package-emacs ()
   "Test"
@@ -84,7 +84,21 @@ directory and also checks if a safe local value should be used."
   (interactive "sEnter name: ")
   (message "Your Name is %s, that's cool !" x))
 
+;;;###autoload
+(defun test-package-emacs-doctor ()
+  "Switch to *doctor* buffer and start giving psychotherapy."
+  (interactive)
+  (switch-to-buffer "*doctor*")
+  (doctor-mode))
+
 (message "Test d'affichage")
+
+(defcustom une-autre-variable (concat user-emacs-directory "test")
+  "une autre"
+  :group 'test-package-emacs
+  :package-version '(test-package-emacs . "0.0.1")
+  :type 'directory)
+
 
 (provide 'test-package-emacs)
 ;;; test-package-emacs.el ends here
