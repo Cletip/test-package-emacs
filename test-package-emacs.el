@@ -23,6 +23,8 @@
 ;;; Commentary:
 
 ;; Put a description of the package here
+;; Chronos est une dépendance : installer automatiquement avec straight
+;; normalement !
 
 ;;; Code:
 
@@ -82,7 +84,7 @@ directory and also checks if a safe local value should be used."
   (interactive "sEnter name: ")
   (message "Your Name is %s, that's cool !" x))
 
-
+(message "Test d'affichage")
 
 (provide 'test-package-emacs)
 ;;; test-package-emacs.el ends here
